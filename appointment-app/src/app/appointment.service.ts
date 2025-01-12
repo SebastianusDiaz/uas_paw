@@ -8,7 +8,7 @@ export class AppointmentService {
   constructor(private http: HttpClient) {}
   addAppointment(appointment: any) {
     return this.http.post(
-      'https://appointment-api-orpin.vercel.app/endpoint/add-appointment',
+      'https://appointment-api-pi.vercel.app/endpoint/add-appointment',
       appointment
     );
   }
@@ -18,7 +18,7 @@ export class AppointmentService {
   // Update item status
   updateItemStatus(id: string, data: any): Observable<any> {
     return this.http.put(
-      'https://appointment-api-orpin.vercel.app/endpoint/update-appointment/' + id,
+      'https://appointment-api-pi.vercel.app/endpoint/update-appointment/' + id,
       data
     );
   }
@@ -26,7 +26,7 @@ export class AppointmentService {
   // Hapus item
   deleteItem(id: string) {
     return this.http.delete(
-      'https://appointment-api-orpin.vercel.app/endpoint/delete-appointment/' + id
+      'https://appointment-api-pi.vercel.app/endpoint/delete-appointment/' + id
     );
   }
 }
