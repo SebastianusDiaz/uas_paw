@@ -13,7 +13,7 @@ export class AppointmentService {
     );
   }
   showAppointment() {
-    return this.http.get('https://appointment-api-orpin.vercel.app/endpoint/');
+    return this.http.get('https://appointment-api-pi.vercel.app/endpoint/');
   }
   // Update item status
   updateItemStatus(id: string, data: any): Observable<any> {
