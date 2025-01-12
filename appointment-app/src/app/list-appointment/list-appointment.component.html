@@ -31,7 +31,7 @@
               <strong>{{ appointments.status }}</strong>
             </p>
           </td>
-          <td>{{ appointments.tanggal }}</td>
+          <td>{{ appointments.tanggal | date:'d MMMM y' }}</td>
           <td>
             <button (click)="markAsComplete(appointments._id)" class="btn btn-outline-info m-2">Selesai</button>
             <button *ngIf="appointments.status === 'Selesai'" (click)="deleteItem(appointments._id)"
